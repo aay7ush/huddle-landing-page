@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap");
+
+/* Reset */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Variables */
+
+:root {
+  --clr-violet: hsl(257, 40%, 49%);
+  --clr-magenta: hsl(300, 69%, 71%);
+  --clr-white: hsl(0, 0%, 100%);
+}
+
+/* General Styles */
+
+body {
+  font-family: "Open Sans", sans-serif;
+  color: var(--clr-white);
+  background-color: var(--clr-violet);
+  min-height: 100vh;
+
+  display: grid;
+  place-content: center;
+
+  background-image: url(images/bg-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+h1 {
+  font-family: "Poppins", sans-serif;
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+/* Introductory Section */
+
+.intro {
+  max-width: 90vw;
+  margin-block: 2rem;
+}
+
+.intro__images img:nth-child(1) {
+  max-width: max(150px, 13vw);
+}
+
+.intro__images img:nth-child(2) {
+  max-width: 100%;
+  padding-top: 3rem;
+}
+
+.intro__content {
+  display: grid;
+  gap: 1.5rem;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.intro__title {
+  font-size: 2rem;
+}
+
+.intro__body {
+  line-height: 1.7rem;
+}
+
+.intro__content button {
+  max-width: 200px;
+  margin-inline: auto;
+  color: var(--clr-violet);
+  border-radius: 30px;
+  padding: 1rem 4rem;
+  font-size: 1.1rem;
+}
+
+.intro__content button:hover {
+  background-color: var(--clr-magenta);
+  color: var(--clr-white);
+}
+
+.intro__socials {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding-top: 3rem;
+}
+
+.intro__socials i {
+  border: 1px solid var(--clr-white);
+  border-radius: 50px;
+  padding: 0.5rem;
+}
+
+.intro__socials i:hover {
+  border-color: var(--clr-magenta);
+  color: var(--clr-magenta);
+  cursor: pointer;
+}
+
+/* Media Queries (MEDIUM SCREENS) */
+
+@media (min-width: 768px) {
+  .intro {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .intro__content {
+    max-height: 400px;
+    margin-block: auto;
+    text-align: start;
+  }
+
+  .intro__content button {
+    margin-inline: 0;
+  }
+
+  .intro__socials {
+    justify-content: end;
+  }
+}
+
+/* Media Queries (LARGE SCREENS) */
+
+@media (min-width: 1280px) {
+  body {
+    background-image: url(images/bg-desktop.svg);
+    background-repeat: no-repeat;
+  }
+
+  .intro {
+    position: relative;
+  }
+
+  .intro__title {
+    font-size: 2.5rem;
+  }
+
+  .intro__body {
+    font-size: 1.1rem;
+  }
+
+  .intro__socials {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+
+  .intro__socials i {
+    font-size: 1.5rem;
+    padding: 0.7rem;
+  }
+}
