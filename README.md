@@ -12,7 +12,7 @@ Building realistic projects to improve my front-end skills.
 
 ### Links
 
-- Live Site URL: [Huddle landing page with single introductory section](https://0rder-summary-card.netlify.app/)
+- Live Site URL: [Huddle landing page with single introductory section](https://huddle-land1ng-page.netlify.app/)
 
 ## Built with
 
